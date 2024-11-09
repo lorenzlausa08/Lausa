@@ -1,0 +1,402 @@
+package com.mycompany.gui;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
+public class GUI {
+
+    public static void main(String[] args) {
+         JFrame frame = new JFrame("GUI");
+         frame.setSize(800,600 );  
+         frame.setResizable(false);
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         JPanel p1 = new JPanel(); // -----------[PANEL NORTH]-----------
+         p1.setPreferredSize(new Dimension(800, 70));
+         p1.setLayout(null);
+         p1.setBackground(Color.ORANGE); 
+         
+         JMenuBar mb = new JMenuBar();
+         
+         JMenu file = new JMenu("FILE");
+         file.setBounds(0, 0, 100, 50);
+         
+         JMenuItem i1 = new JMenuItem("item 1");
+         JMenuItem i11 = new JMenuItem("item 11");
+         JMenuItem i12 = new JMenuItem("item 12");
+         
+         JMenu extend = new JMenu("item 13");
+         JMenuItem i14 = new JMenuItem("item 14");
+         JMenuItem i15 = new JMenuItem("item 15");
+         JMenuItem i16 = new JMenuItem("item 16");
+         
+         file.add(i1);
+         file.add(i11);
+         file.add(i12);
+         file.add(extend);
+         extend.add(i14);
+         extend.add(i15);
+         extend.add(i16);
+         
+         
+         
+         JMenu menu = new JMenu("MENU");
+         menu.setBounds(0, 0, 100, 50);
+         
+         JMenu help = new JMenu("HELP");
+         help.setBounds(0, 0, 100, 50);
+     
+     
+         
+         
+         mb.add(file);
+         mb.add(menu);
+         mb.add(help);
+        
+         mb.setBounds(0, 0, 130, 30);
+         p1.add(mb);
+         
+        ImageIcon icon = new ImageIcon("C:\\Users\\User\\Downloads\\images.png");
+        Image resize = icon.getImage().getScaledInstance(60, 40, Image.SCALE_SMOOTH);
+        icon = new ImageIcon(resize);
+        JLabel icon1 = new JLabel(icon);
+        icon1.setBounds(650, 10, 50, 50);
+        p1.add(icon1);
+         
+        JLabel amazon = new JLabel("AMAZON");
+        amazon.setFont(new Font("Monospaced", Font.BOLD, 18));
+        amazon.setBounds(710, 20, 250, 30);
+        p1.add(amazon);
+        
+         
+         frame.add(p1, BorderLayout.NORTH); // -----------[PANEL NORTH END]-----------
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         JPanel p2 = new JPanel(); // -----------[PANEL SOUTH]-----------
+         p2.setPreferredSize(new Dimension(800, 70));
+         p2.setLayout(null);
+         p2.setBackground(Color.green);
+         
+         
+         
+         
+         JLabel L2 = new JLabel("ABOUT US");
+         L2.setFont(new Font("Monospaced", Font.BOLD, 18));
+         L2.setBounds(15, 0, 250, 30);
+         p2.add(L2); 
+         
+          JLabel L21 = new JLabel("Who we are");
+         L21.setFont(new Font("Monospaced", Font.BOLD, 15));
+         L21.setBounds(75, 30, 250, 30);
+         p2.add(L21); 
+         
+         
+        ImageIcon i = new ImageIcon("C:\\Users\\User\\Downloads\\images1.png");
+        Image resize1 = i.getImage().getScaledInstance(60, 40, Image.SCALE_AREA_AVERAGING);
+        i = new ImageIcon(resize1);
+        JLabel icon2 = new JLabel(i);
+        icon2.setBounds(15, 20, 50, 50);
+        p2.add(icon2);
+        
+        
+        
+         JLabel L22 = new JLabel("OUR SERVICE");
+         L22.setFont(new Font("Monospaced", Font.BOLD, 18));
+         L22.setBounds(330, 0, 250, 30);
+         p2.add(L22); 
+         
+         JLabel L23 = new JLabel("Retail, Entertainment, Delivery");
+         L23.setFont(new Font("Monospaced", Font.BOLD, 13));
+         L23.setBounds(290, 20, 1000, 30);
+         p2.add(L23);
+         
+         
+         JLabel L24 = new JLabel("CONTACT US");
+         L24.setFont(new Font("Monospaced", Font.BOLD, 18));
+         L24.setBounds(640, 0, 250, 30);
+         p2.add(L24); 
+         
+        ImageIcon icons = new ImageIcon("C:\\Users\\User\\Downloads\\images 2.png");
+        Image resizes = icons.getImage().getScaledInstance(60, 40, Image.SCALE_AREA_AVERAGING);
+        icons = new ImageIcon(resizes);
+        JLabel icon21 = new JLabel(icons);
+        icon21.setBounds(600, 20, 50, 50);
+        p2.add(icon21);
+          
+        JLabel LastLabel = new JLabel("#09643639534" );
+         LastLabel.setFont(new Font("Monospaced", Font.BOLD, 15));
+         LastLabel.setBounds(652, 30, 250, 30);
+         p2.add(LastLabel); 
+        
+        
+         
+         frame.add(p2, BorderLayout.SOUTH); // -----------[PANEL SOUTH END]-----------
+         
+         
+         
+         
+         
+         
+         
+         
+         JPanel p3 = new JPanel(); // -----------[PANEL WEST]-----------
+         p3.setPreferredSize(new Dimension(150,460));
+         p3.setLayout(null);
+         p3.setBackground(Color.pink);
+
+         
+         JLabel L3 = new JLabel("ADMIN PANEL");
+         L3.setBounds(15,-20,1000,100);
+         L3.setFont(new Font("Monospaced", Font.BOLD, 18));
+         p3.add(L3);
+         
+         JButton btn1 = new JButton("DASHBOARD");
+         btn1.setBounds(10, 65, 120, 20);
+         btn1.setFont(new Font("Monospaced", Font.BOLD, 15));
+         p3.add(btn1);
+         
+         JButton btn2 = new JButton("STUDENT");
+         btn2.setBounds(10, 95, 120, 20);
+         btn2.setFont(new Font("Monospaced", Font.BOLD, 15));
+         p3.add(btn2);
+         
+         JButton btn3 = new JButton("FACULTY");
+         btn3.setBounds(10, 125, 120, 20);
+         btn3.setFont(new Font("Monospaced", Font.BOLD, 15));
+         p3.add(btn3);
+         
+         JButton btn4 = new JButton("DEPARTMENT");
+         btn4.setBounds(10, 155, 120, 20);
+         btn4.setFont(new Font("Monospaced", Font.BOLD, 13));
+         p3.add(btn4);
+         
+         JButton btn5 = new JButton("COURSE");
+         btn5.setBounds(10, 185, 120, 20);
+         btn5.setFont(new Font("Monospaced", Font.BOLD, 15));
+         p3.add(btn5);
+         
+         
+         frame.add(p3, BorderLayout.WEST);// -----------[PANEL WEST END]-----------
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         JPanel p4 = new JPanel(); //-----------[PANEL EAST]-----------
+         p4.setPreferredSize(new Dimension(400,600));
+         p4.setLayout(null);
+         
+         
+         
+         
+         JLabel L4 = new JLabel("SEARCH ");
+         L4.setBounds(10, 13, 160, 45);
+         L4.setFont(new Font("Monospaced", Font.BOLD, 18));
+         p4.add(L4);
+         
+         JTextField text2 = new JTextField("");
+         text2.setBounds(85, 25, 160, 25);
+         p4.add(text2);
+         
+         JButton button1 = new JButton("OK");
+         button1.setBounds(250, 25, 80, 25);
+         p4.add(button1);
+         
+         JButton button2 = new JButton("UPDATE");
+         button2.setBounds(15, 380, 80, 20);
+         p4.add(button2);
+         
+         JButton button3 = new JButton("ADDING");
+         button3.setBounds(120, 380, 80, 20);
+         p4.add(button3);
+         
+         JButton button4 = new JButton("DELETE");
+         button4.setBounds(225, 380, 80, 20);
+         p4.add(button4);
+         
+         
+          String [] label = {"ID", "LRN", "FA", "MN", "DEP", "COUR"};
+          Object[][] data = {
+             
+             {"2022-1119","Lugatiman","Kenji","S","FaCET","BSIT"},
+             {"2022-1051","Piloton","Wilfredo","O","FaCET","BSIT"},
+             {"2022-0911","Banagan","Jade","A","FaCET","BSIT"},
+             {"2022-0901","Lausa","Lorenz","D","FaCET","BSIT"},
+             {"2022-0392","Clata","Kim","C","FaCET","BSIT"},
+             {"2022-4142","Agregado","Daryl","D","FaCET","BSIT"},
+             {"2022-3211","Perdiso","Harun","S","FGBM","BSCRIM"},
+             {"2022-4155","Vicente","Jude","D","FALS","BSBIO"},            
+             {"2022-1119","Lugatiman","Kenji","S","FaCET","BSIT"},
+             {"2022-1051","Piloton","Wilfredo","O","FaCET","BSIT"},
+             {"2022-0911","Banagan","Jade","A","FaCET","BSIT"},
+             {"2022-0901","Lausa","Lorenz","D","FaCET","BSIT"},
+             {"2022-0392","Clata","Kim","C","FaCET","BSIT"},
+             {"2022-4142","Agregado","Daryl","D","FaCET","BSIT"},
+             {"2022-3211","Perdiso","Harun","S","FGBM","BSCRIM"},
+             {"2022-4155","Vicente","Jude","D","FALS","BSBIO"},
+             {"2022-4142","Agregado","Daryl","D","FaCET","BSIT"},
+             {"2022-3211","Perdiso","Harun","S","FGBM","BSCRIM"},
+             {"2022-4155","Vicente","Jude","D","FALS","BSBIO"},            
+             {"2022-1119","Lugatiman","Kenji","S","FaCET","BSIT"},
+             {"2022-1051","Piloton","Wilfredo","O","FaCET","BSIT"},
+             {"2022-0911","Banagan","Jade","A","FaCET","BSIT"},
+             {"2022-0901","Lausa","Lorenz","D","FaCET","BSIT"},
+             {"2022-0392","Clata","Kim","C","FaCET","BSIT"},
+             {"2022-4142","Agregado","Daryl","D","FaCET","BSIT"},
+             {"2022-3211","Perdiso","Harun","S","FGBM","BSCRIM"},
+             {"2022-4155","Vicente","Jude","D","FALS","BSBIO"},
+             {"2022-3211","Perdiso","Harun","S","FGBM","BSCRIM"},
+             {"2022-4155","Vicente","Jude","D","FALS","BSBIO"},            
+             {"2022-1119","Lugatiman","Kenji","S","FaCET","BSIT"},
+             {"2022-1051","Piloton","Wilfredo","O","FaCET","BSIT"},
+             {"2022-0911","Banagan","Jade","A","FaCET","BSIT"},
+             {"2022-0901","Lausa","Lorenz","D","FaCET","BSIT"},
+             {"2022-0392","Clata","Kim","C","FaCET","BSIT"},
+             {"2022-4142","Agregado","Daryl","D","FaCET","BSIT"},
+             {"2022-3211","Perdiso","Harun","S","FGBM","BSCRIM"},
+             {"2022-4155","Vicente","Jude","D","FALS","BSBIO"},
+         
+    };
+                 JTable tab = new JTable(data, label);                
+                 tab.setBackground(Color.white);
+                 tab.setBounds(10, 70, 380, 300);
+                 tab.setAutoCreateColumnsFromModel(true);
+                 p4.add(tab);
+                 JScrollPane scroll = new JScrollPane(tab);
+                 scroll.setBounds(10, 70, 380, 300);
+                 
+                 p4.add(scroll);
+                 
+         
+         p4.setBackground(Color.white);
+         frame.add(p4, BorderLayout.EAST);//-----------[PANEL EAST END]-----------
+ 
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         JPanel p5 = new JPanel(); // -----------[PANEL CENTER]-----------
+         p5.setPreferredSize(new Dimension(250, 460));
+         p5.setLayout(null);
+         p5.setBackground(Color.cyan);
+         
+         JLabel L5 = new JLabel("INFORMATION PANEL");
+         L5.setBounds(15,-20,1000,100);
+         L5.setFont(new Font("Monospaced", Font.BOLD, 18));
+         p5.add(L5);
+         
+         JLabel fName = new JLabel("FIRST NAME: ");
+         fName.setBounds(10, 35, 125,80);
+         p5.add(fName);
+         
+         JTextField text1 = new JTextField("");
+         text1.setBounds(100, 65, 120, 20);
+         p5.add(text1);
+         
+         JLabel lName = new JLabel("LAST NAME: ");
+         lName.setBounds(10, 60, 125,80);
+         p5.add(lName);
+         
+         JTextField text3 = new JTextField("");
+         text3.setBounds(100, 90, 120, 20);
+         p5.add(text3);
+         
+         
+         
+         JLabel sName = new JLabel("SUFFIX: ");
+         sName.setBounds(10, 90, 125,80);
+         p5.add(sName);
+         
+         String suffix[] = {"Option 1","Option 2","Option 3","Option 4","Salsal ni L"};
+         JComboBox option = new JComboBox(suffix);
+         option.setBounds(100, 120, 120, 20);
+         p5.add(option);
+         
+         JLabel age = new JLabel("AGE: ");
+         age.setBounds(10, 125, 125, 80);
+         p5.add(age);
+         
+         JSpinner spinner = new JSpinner();
+         spinner.setBounds(100, 155, 120, 20);
+         p5.add(spinner);
+         
+         JLabel gender = new JLabel("GENDER: ");
+         gender.setBounds(10, 155, 125, 80);
+         p5.add(gender);
+         
+         JRadioButton male = new JRadioButton("M");
+         JRadioButton female = new JRadioButton("F");
+         male.setBounds(100, 185, 50, 20);
+         female.setBounds(150, 185, 50, 20);
+         p5.add(male);
+         p5.add(female);
+         
+          JLabel address = new JLabel("ADDRESS: ");
+         address.setBounds(10, 190, 125,80);
+         p5.add(address);
+         
+         JTextField text4 = new JTextField("");
+         text4.setBounds(100, 220, 130, 50);
+         p5.add(text4);
+         
+         
+         
+         
+
+         frame.add(p5, BorderLayout.CENTER); // -----------[PANEL CENTER END]-----------
+         
+                  
+         
+         
+         
+         
+        
+         
+         
+         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         frame.setVisible(true);
+    }
+}
